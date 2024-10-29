@@ -1,4 +1,4 @@
-package com.example.demo.controller.serversidetemplating;
+package com.example.demo.controller;
 
 import com.example.demo.dto.ArticleDto;
 import com.example.demo.service.ArticleService;
@@ -26,10 +26,10 @@ public class HomeController {
         // C'est la view "home" qui sera utilisée pour constuire la réponse => fichier home.mustache
         ModelAndView modelAndView = new ModelAndView("home");
 
-        // Chargement des articles
-        List<ArticleDto> articles = articleService.findAll();
-        // et "stockage" dans une variable nommé "articles"
-        modelAndView.addObject("articles", articles);
+        // Chargement des articlestoto
+        List<ArticleDto> articlestoto = articleService.findAll();
+        // et "stockage" dans une variable nommé "articlestoto"
+        modelAndView.addObject("articles", articlestoto);
         return modelAndView;
     }
 

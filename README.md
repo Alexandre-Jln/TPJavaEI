@@ -1,11 +1,23 @@
+# Prérequis 
+* class / object
+* class / interface / classe abstraite
+* héritage
+* statique / dynamique
+* spring-boot
+* injection
+* Hibernate / JPA
+* server/client side rendering
+
 # TP
-1° Compléter l'export export-articles.csv
-2° Ajout l'objet client (nom + prénom) 
-3° Réaliser l'export export-client.csv 
-4° Rajouter dans l'export précédent l'age du client : export-clients-avec-age.csv
-3° Réaliser l'export export-client.xlsx avec la mise en forme demandée (cf fichier export-clients.xlsx)
-4° Réaliser l'export total factures (cf fichier export-factures.xlsx)
-5° Réaliser l'export PDF d'une facture (format au choix)
+* Terminer l'export articles
+* Compléter l'export export-articles.csv
+* Ajouter l'entité client (nom + prénom) 
+* Réaliser l'export export-client.csv 
+* Ajouter dans le client et dans son export l'age
+* Rajouter dans l'export précédent l'age du client : export-clients-avec-age.csv
+* Réaliser l'export export-client.xlsx avec la mise en forme demandée (cf fichier export-clients.xlsx)
+* Réaliser l'export total factures (cf fichier export-factures.xlsx)
+* Réaliser l'export PDF d'une facture (format au choix)
 
 
 # Fonctionnement

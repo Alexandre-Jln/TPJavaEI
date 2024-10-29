@@ -28,7 +28,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public List<ArticleDto> findAll() {
-        return articleRepository.findAll().stream().map(article -> articleMapper.articleDto(article)).collect(toList());
+        return articleRepository.findAll().stream().map(article -> articleMapper.transformerEnDto(article)).collect(toList());
     }
 
 }
