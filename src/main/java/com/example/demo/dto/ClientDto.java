@@ -7,14 +7,16 @@ public class ClientDto {
     private Long id;
     private String nom;
     private String prenom;
+    private int age;
 
     public ClientDto() {
     }
 
-    public ClientDto(Long id, String nom, String prenom) {
+    public ClientDto(Long id, String nom, String prenom, int age) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
+        this.age = age;
     }
 
     public Long getId() {
@@ -39,5 +41,13 @@ public class ClientDto {
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

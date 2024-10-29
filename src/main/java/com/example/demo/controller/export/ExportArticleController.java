@@ -1,7 +1,6 @@
 package com.example.demo.controller.export;
 
-import com.example.demo.dto.ArticleDto;
-import com.example.demo.service.ArticleService;
+import com.example.demo.service.ExportCsvService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
 /**
  * Controller pour réaliser l'export des articles.
@@ -21,7 +19,7 @@ import java.util.List;
 public class ExportArticleController {
 
     @Autowired
-    private ArticleService articleService;
+    private ExportCsvService exportCsvService;
 
     /**
      * Export des articles au format CSV.
@@ -31,10 +29,6 @@ public class ExportArticleController {
         response.setContentType("text/csv");
         response.setHeader("Content-Disposition", "attachment; filename=\"export-articles.csv\"");
         PrintWriter writer = response.getWriter();
-        writer.println("Libellé;Prix");
-        List<ArticleDto> articles = articleService.findAll();
-        for (ArticleDto article : articles) {
-            writer.println("\"" + article.getLibelle() + "\"" + ";" + article.getPrix());
-        }
+        exportCsvService.exportArticle(writer);
     }
 }

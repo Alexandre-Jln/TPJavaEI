@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
 
 /**
  * Entity représentant un client.
@@ -21,6 +22,9 @@ public class ClientEntity {
 
     @Column
     private String prenom;
+
+    @Column
+    private LocalDate dateNaissance;
 
     public ClientEntity() {
     }
@@ -55,5 +59,11 @@ public class ClientEntity {
         this.prenom = prenom;
     }
 
+    public LocalDate getDateNaissance() {
+        return dateNaissance;
+    }
 
+    public void setDateNaissance(LocalDate dateNaissance) {
+        this.dateNaissance = dateNaissance;
+    }
 }

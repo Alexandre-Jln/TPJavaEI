@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import java.time.LocalDate;
 
 /**
  * Classe permettant d'insérer des données dans l'application.
@@ -36,6 +37,7 @@ public class InitData implements ApplicationListener<ApplicationReadyEvent> {
         ArticleEntity a6 = createArticle("UN AFFINEUR DE VISAGE", 52, "https://static.hitek.fr/img/actualite/2016/08/26/w_41r-1yapf5l.jpg");
 
         ClientEntity c1 = new ClientEntity(null, "dujardin", "jean");
+        c1.setDateNaissance(LocalDate.of(1985, 6, 1));
         entityManager.persist(c1);
     }
 
