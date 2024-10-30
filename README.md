@@ -16,8 +16,13 @@
 * Ajouter dans le client et dans son export l'age
 * Rajouter dans l'export précédent l'age du client : export-clients-avec-age.csv
 * Réaliser l'export export-client.xlsx avec la mise en forme demandée (cf fichier export-clients.xlsx)
-* Réaliser l'export total factures (cf fichier export-factures.xlsx)
 * Réaliser l'export PDF d'une facture (format au choix)
+
+A réaliser en centre de ressources. en autonomie pour l'évaluation
+* Réaliser l'export total factures (cf fichier export-factures.xlsx)
+* A rendre par mail alexandre.petrillo@intervenant.igensia.com
+* Faire des copies d'écrans des portions de code utiles.
+* date limite le 10 novembre.
 
 
 # Fonctionnement

@@ -33,5 +33,13 @@
         <h2>Facture numéro {{id}} de {{clientNom}} {{clientPrenom}} <a href="/export/factures/{{id}}/pdf">pdf</a></h2>
         {{>factures}}
     {{/factures}}
+
+    <hr/>
+    Importer clients
+    <form action="/import/clients/csv" method="post" enctype="multipart/form-data">
+        <label for="file">Choose CSV file:</label>
+        <input type="file" id="file" name="file" accept=".csv" required>
+        <button type="submit">Upload</button>
+    </form>
 </body>
 </html>
