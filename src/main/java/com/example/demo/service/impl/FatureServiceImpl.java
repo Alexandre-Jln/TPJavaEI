@@ -30,4 +30,9 @@ public class FatureServiceImpl implements FactureService {
         return factureRepository.findAll().stream().map(article -> factureMapper.transformerEnDto(article)).collect(toList());
     }
 
+    @Override
+    public FactureDto findById(Long id) {
+        return factureRepository.findById(id).map(article -> factureMapper.transformerEnDto(article)).orElse(null);
+    }
+
 }

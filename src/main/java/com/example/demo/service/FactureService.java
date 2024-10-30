@@ -7,4 +7,6 @@ import java.util.List;
 public interface FactureService {
     List<FactureDto> findAll();
 
+    FactureDto findById(Long id);
+
 }
