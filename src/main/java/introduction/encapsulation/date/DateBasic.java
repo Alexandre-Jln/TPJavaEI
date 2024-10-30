@@ -30,7 +30,6 @@ public class DateBasic implements Date {
 
     @Override
     public int getNumDayInYear() {
-        // FIXME a corriger car probleme
         // mois et février
         int resultat = day;
         for (int iMonth = 1; iMonth < month; iMonth++) {

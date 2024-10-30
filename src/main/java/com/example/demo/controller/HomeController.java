@@ -2,8 +2,10 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.ArticleDto;
 import com.example.demo.dto.ClientDto;
+import com.example.demo.dto.FactureDto;
 import com.example.demo.service.ArticleService;
 import com.example.demo.service.ClientService;
+import com.example.demo.service.FactureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,9 @@ public class HomeController {
     @Autowired
     private ClientService clientService;
 
+    @Autowired
+    private FactureService factureService;
+
     /**
      * Point d'entrée lorsque url http://localhost:8080/ sera déclenchée.
      */
@@ -38,6 +43,9 @@ public class HomeController {
 
         List<ClientDto> clients = clientService.findAll();
         modelAndView.addObject("clients", clients);
+
+        List<FactureDto> factures = factureService.findAll();
+        modelAndView.addObject("factures", factures);
 
         return modelAndView;
     }
